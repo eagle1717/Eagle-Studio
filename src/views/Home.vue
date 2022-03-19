@@ -60,13 +60,18 @@
         Check out these projects to see why you should use our Services!
       </p>
     </div>
-    <vueper-slides fade :touchable="false" class="portfolio__projects w-full">
+    <vueper-slides
+      fade
+      :touchable="false"
+      class="portfolio__projects w-full cursor-pointer"
+    >
       <vueper-slide
         v-for="(slide, i) in slides"
         :key="i"
         :image="slide.image"
         :title="slide.title"
         :content="slide.content"
+        @click="openProject(slide.link)"
       />
     </vueper-slides>
   </section>
@@ -89,6 +94,11 @@ export default {
       service: [],
       slides: [],
     };
+  },
+  methods: {
+    openProject(link) {
+      window.open(link, "_blank");
+    },
   },
   created() {
     this.axios.get("service.json").then((res) => {
