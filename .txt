@@ -1,2 +1,0 @@
-1. gradient
-2. adaptive
