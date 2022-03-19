@@ -1,0 +1,57 @@
+@import "./colors";
+@import "./mixins";
+@import "./fonts";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  @include tablet {
+    max-width: 100%;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
+  @include premobile {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+}
+
+.active-section {
+  color: var(--purple);
+  font-family: "Nunito-Bold";
+}
+
+.base-animation {
+  @apply transition transform;
+}
+
+@include mobile {
+  h1 {
+    font-size: 42px;
+    line-height: 63px;
+  }
+  h2 {
+    font-size: 36px;
+    line-height: 54px;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  .text-2xl,
+  .text-xl,
+  .text-lg,
+  .text-base-xl,
+  .text-base-sm,
+  .text-sm,
+  .text-xs {
+    font-size: 16px;
+    line-height: 28px;
+  }
+}

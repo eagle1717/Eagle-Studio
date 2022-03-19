@@ -1,30 +1,43 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div class="wrapper bg-black min-h-screen text-white flex flex-col">
+    <TheNavbar />
+    <main class="wrapper__content">
+      <router-view />
+    </main>
+    <TheFooter />
   </div>
-  <router-view />
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import { mapActions } from "vuex";
+import TheNavbar from "@/components/The/Navbar.vue";
+import TheFooter from "@/components/The/Footer.vue";
+export default {
+  components: {
+    TheNavbar,
+    TheFooter,
+  },
+  methods: {
+    ...mapActions(["loadSocialNetworksData"]),
+  },
+  created() {
+    this.loadSocialNetworksData();
+  },
+};
+</script>
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+<style lang="scss" scoped>
+@import "@/assets/styles/mixins";
+.wrapper {
+  padding-top: 30px;
+  @include premobile {
+    padding-top: 20px;
+  }
+  &__content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    max-width: 100%;
   }
 }
 </style>
