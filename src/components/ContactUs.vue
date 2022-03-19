@@ -1,9 +1,7 @@
 <template>
   <section id="contact-us" class="contact-us base-section">
     <div class="contact-us__container bg-blacky w-screen">
-      <div
-        class="contact-us__container__content container relative flex lg:grid"
-      >
+      <div class="contact-us__container__content container flex lg:grid">
         <h2 class="contact-us__container__content__title">
           Contact us to create the interface of your website
         </h2>
@@ -13,8 +11,6 @@
         >
           Contact us</base-button
         >
-        <BaseDecoration decoration="plus" r="0" t="69" />
-        <BaseDecoration decoration="circles" l="38" b="64" />
       </div>
     </div>
   </section>

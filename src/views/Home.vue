@@ -1,8 +1,5 @@
 <template>
-  <section
-    id="about"
-    class="about-us relative base-section container flex lg:grid"
-  >
+  <section id="about" class="about-us base-section container flex lg:grid">
     <div class="about-us__left">
       <h1 class="about-us__left__title">About our Eagle Studio team</h1>
       <p class="about-us__left__description text-base-xl text-grey">
@@ -17,16 +14,12 @@
     <div class="about-us__right">
       <base-img format="png" src="about-us/man" />
     </div>
-    <BaseDecoration decoration="wave" t="124" l="556" />
-    <BaseDecoration decoration="circles" r="86" t="77" />
-    <BaseDecoration decoration="plus" r="72" b="54" />
-    <BaseDecoration decoration="triangles" l="498" b="33" />
   </section>
 
   <section
     v-if="service.length > 0"
     id="service"
-    class="service relative base-section container"
+    class="service base-section container"
   >
     <h2 class="service__title m-auto text-center">
       The Service We Provide For You
@@ -53,14 +46,11 @@
         </div>
       </div>
     </div>
-    <BaseDecoration decoration="plus" r="2" t="81" :rotate="-31.42" />
-    <BaseDecoration decoration="triangles" l="64" t="-33" />
-    <BaseDecoration decoration="plus" l="-27" b="-48" :rotate="25.34" />
   </section>
   <section
     v-if="slides.length > 0"
     id="projects"
-    class="portfolio relative base-section container"
+    class="portfolio base-section container"
   >
     <div class="portfolio__nav flex-start md:grid">
       <h2 class="portfolio__nav__title">
@@ -79,8 +69,6 @@
         :content="slide.content"
       />
     </vueper-slides>
-    <BaseDecoration decoration="circles" r="41" t="80" />
-    <BaseDecoration decoration="wave" l="-48" b="-80" />
   </section>
   <ContactUs />
 </template>
