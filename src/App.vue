@@ -29,10 +29,6 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/styles/mixins";
 .wrapper {
-  padding-top: 30px;
-  @include premobile {
-    padding-top: 20px;
-  }
   &__content {
     -webkit-box-flex: 1;
     -ms-flex: 1 0 auto;

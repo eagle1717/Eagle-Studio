@@ -76,7 +76,6 @@ export default {
       this.sectionGroup("about");
       this.sectionGroup("service");
       this.sectionGroup("projects");
-      this.sectionGroup("contact-us");
     },
     onScroll() {
       this.width = document.documentElement.clientWidth;

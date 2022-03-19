@@ -1,5 +1,5 @@
 <template>
-  <section id="contact-us" class="contact-us base-section">
+  <section id="contact-us" class="contact-us">
     <div class="contact-us__container bg-blacky w-screen">
       <div class="contact-us__container__content container flex lg:grid">
         <h2 class="contact-us__container__content__title">
